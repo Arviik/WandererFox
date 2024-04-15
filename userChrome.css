@@ -1,0 +1,41 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.click-target-container *, .top-site-list * {
+    color: #fff !important;
+    text-shadow: 2px 2px 2px #000 !important;
+}
+
+body {
+    background-image: url(img/new-tab-wallpaper.png) !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+.menupopup-arrowscrollbox, panel-list, .context-menu, ul[role="menu"].menu {
+    -moz-apperance: none !important;
+    background-color: #000 !important;
+    border-color: #000 !important;
+}
+
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+    .click-target-container *, .top-site-list * {
+        color: #fff !important;
+        text-shadow: 2px 2px 2px #000 !important;
+    }
+
+    body {
+        background-image: url(img/new-tab-wallpaper.png) !important;
+        background-size: cover !important;
+        background-position: center;
+    }
+
+    .search-wrapper .search-handoff-button,
+    .search-wrapper input {
+        background: #000 var(--newtab-search-icon) 16px center no-repeat !important;
+    }
+
+    .search-wrapper .search-handoff-button,
+    .search-wrapper input {
+        background: #000 var(--newtab-search-icon) 16px center no-repeat !important;
+    }
+}

@@ -1,0 +1,42 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+    .click-target-container *, .top-site-list * {
+        color: #fff !important ;
+        text-shadow: 2px 2px 2px #000 !important ;
+    }
+
+    body {
+        background-image: url(img/new-tab-wallpaper.png) !important ;
+        background-size: cover !important ;
+		background-position: center; 
+    }
+	
+	.search-wrapper .search-handoff-button,
+	.search-wrapper input {
+		background: #000 var(--newtab-search-icon) 16px center no-repeat !important;
+	}
+	
+	:root[lwt-newtab-brighttext] {
+		--newtab-background-color-secondary: #000 !important;
+	}
+}
+
+body[lwt-newtab-brighttext] {
+	--newtab-background-color-secondary: #353535 !important;
+	--newtab-background-color: #353535 !important;
+	--newtab-primary-element-text-color: #353535 !important;
+	--newtab-primary-action-background: #FFFFFF !important;
+	--newtab-textbox-focus-boxshadow: 0 0 0 1px #FFFFFF, 0 0 0 4px rgba(#FFFFFF, 0.3) !important;
+}
+
+.search-wrapper .search-handoff-button,
+.search-wrapper input {
+	background: #000 var(--newtab-search-icon) 16px center no-repeat !important;
+}
+
+@-moz-document url-prefix(about:preferences), url-prefix(about:config) {
+	@media (prefers-color-scheme: dark) {
+		:host, :root {
+			--in-content-page-background: #000 !important;
+		}
+	}
+}
